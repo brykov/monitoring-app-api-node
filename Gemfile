@@ -7,7 +7,10 @@ gem 'rails-api'
 
 gem 'usagewatch_ext'
 
-gem 'capistrano-passenger', group: 'development'
+group :development do
+  gem 'capistrano-passenger'
+  gem 'capistrano-bundler'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

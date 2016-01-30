@@ -1,28 +1,22 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In order to deploy this app under the Linux ditribution several preparations are required.
+Considering Debian Jessie please run the following command:
 
-Things you may want to cover:
+    apt-get install g++ make libxml2-dev zlib1g-dev
 
-* Ruby version
+Taking into account Nginx + Phusion Passenger based deployment don't forget to enable Passenger in Nginx config file <tt>/etc/nginx/nginx.conf</tt>:
 
-* System dependencies
+    passenger_root /usr/lib/ruby/vendor_ruby/phusion_passenger/locations.ini;
+    passenger_ruby /usr/bin/passenger_free_ruby;
 
-* Configuration
+Here is sample config for the app <tt>/etc/nginx/conf.d/api-node.conf</tt>:
 
-* Database creation
+    server {
+        server_name your.host.name;
+        root /home/app/api-node/current/public;
+        passenger_sticky_sessions on;
+        passenger_enabled on;
+        passenger_app_root /home/app/api-node/current;
+    }
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
