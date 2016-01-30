@@ -5,6 +5,9 @@ gem 'rails', '4.2.5'
 
 gem 'rails-api'
 
+gem 'usagewatch_ext'
+
+gem 'capistrano-passenger', group: 'development'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
