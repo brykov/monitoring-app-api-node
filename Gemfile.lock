@@ -111,8 +111,6 @@ GEM
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     usagewatch (0.0.7)
-    usagewatch_ext (0.2.1)
-      usagewatch (~> 0.0.6)
 
 PLATFORMS
   ruby
@@ -122,7 +120,7 @@ DEPENDENCIES
   capistrano-passenger
   rails (= 4.2.5)
   rails-api
-  usagewatch_ext
+  usagewatch
 
 BUNDLED WITH
    1.11.2
