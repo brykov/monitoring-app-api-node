@@ -59,4 +59,4 @@
 
 set :ssh_options, {keys: %W(#{ENV['HOME']}/.ssh/id_rsa)}
 
-role :app, %w(app@ec2-52-91-243-249.compute-1.amazonaws.com)
+role :app, %w(app@aws01.brykov.net app@aws02.brykov.net app@aws03.brykov.net)

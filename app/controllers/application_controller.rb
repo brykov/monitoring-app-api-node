@@ -1,7 +1,5 @@
 class ApplicationController < ActionController::API
 
-  # rescue_from ''
-
   def stats
     usw = Usagewatch
     render json: {
