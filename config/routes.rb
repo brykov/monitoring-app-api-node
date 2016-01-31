@@ -55,4 +55,5 @@ Rails.application.routes.draw do
   #   end
 
   get 'stats' => 'application'
+  post 'shutdown' => 'application'
 end

@@ -17,4 +17,8 @@ class ApplicationController < ActionController::API
                uw_memtop: usw.uw_memtop,
            }
   end
+
+  def shutdown
+    system('sudo poweroff')
+  end
 end
