@@ -19,6 +19,10 @@ class ApplicationController < ActionController::API
     render text: 'OK'
   end
 
+  def status
+    render text: 'ALIVE'
+  end
+
   private
 
   def authenticate!
